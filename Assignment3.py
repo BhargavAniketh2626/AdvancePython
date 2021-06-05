@@ -1,0 +1,13 @@
+import cv2 as cv
+img = cv.imread("sample2.jpg")
+print(img.shape)
+print(img.size)
+print(img.dtype)
+cv.imshow("mybrainovision", img)
+cv.imwrite("mybrainovision.jpg", img)
+grayImg1 = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+cv.imwrite("GrayImager.jpg",grayImg1)
+cv.imshow("original",img)
+cv.imshow("GrayImager", grayImg1)
+cv.waitKey(0)
+cv.destroyAllWindows()
